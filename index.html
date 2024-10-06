@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Audit Scheduler</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,33 +13,51 @@
         }
 
         svg {
-            width: 100%; /* Make SVG responsive */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
 
-        /* Optional: Center the SVG in the viewport */
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Fill the viewport height */
-            padding: 10px; /* Add some padding for mobile */
-            box-sizing: border-box; /* Ensure padding doesn't affect total width */
+            min-height: 100vh;
+            padding: 20px; /* Added padding for better mobile view */
         }
 
-        /* Optional: Add some styles for links */
         a {
-            text-decoration: none; /* Remove underline */
+            text-decoration: none;
         }
 
-        /* Optional: Button styles */
         rect {
-            cursor: pointer; /* Change cursor to pointer for interactive elements */
+            cursor: pointer;
         }
 
-        /* Ensure text is responsive */
-        text {
-            font-family: 'Source Sans Pro', sans-serif; /* Ensure font consistency */
+        /* Styles for desktop */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                padding: 40px; /* More padding on larger screens */
+            }
+
+            svg {
+                max-width: 600px; /* Limit the size on desktop */
+            }
+        }
+
+        /* Styles for mobile */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+
+            rect {
+                rx: 12; /* More rounded corners on mobile */
+            }
+
+            text {
+                font-size: 14px; /* Adjust font size for mobile */
+            }
         }
     </style>
 </head>
@@ -46,51 +65,46 @@
     <div class="container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 667" fill="none">
             <rect width="375" height="667" fill="#fff"></rect>
-            <g opacity="100%">
-                <rect x="0" y="0" width="375" height="60" fill="#76d206" stroke="#e5e7eb" stroke-width="0" rx="0"></rect>
+            <g>
+                <rect x="0" y="0" width="375" height="60" fill="#76d206"></rect>
             </g>
-            <g opacity="100%">
-                <text x="116" y="36.5" font-size="18" fill="#fff" letter-spacing="-0.45" font-weight="normal" font-style="normal">EnergyAuditScheduler</text>
+            <g>
+                <text x="116" y="36.5" font-size="18" fill="#fff">EnergyAuditScheduler</text>
             </g>
-            <g opacity="100%">
+            <g>
                 <text x="16" y="189.5" font-size="24" fill="#030303">Welcome to Energy Audit</text>
                 <text x="16" y="221.5" font-size="24" fill="#030303">Scheduler</text>
             </g>
-            <g opacity="100%">
+            <g>
                 <text x="16" y="255" font-size="16" fill="#030303">Schedule and manage your energy audits</text>
                 <text x="16" y="279" font-size="16" fill="#030303">effortlessly!</text>
             </g>
-            
             <!-- Schedule an Audit Button -->
             <a xlink:href="#schedule-audit">
-                <g opacity="100%">
+                <g>
                     <rect x="16" y="309" width="343" height="52" fill="#030303" rx="24"></rect>
                     <text x="134.5" y="340" font-size="14" fill="#fff">Schedule an Audit</text>
                 </g>
             </a>
-
             <!-- View Scheduled Audits Button -->
             <a xlink:href="#view-scheduled-audits">
-                <g opacity="100%">
+                <g>
                     <rect x="16" y="385" width="343" height="52" fill="#76d206" rx="24"></rect>
                     <text x="121.5" y="416" font-size="14" fill="#fff">View Scheduled Audits</text>
                 </g>
             </a>
-
             <!-- Access Settings Button -->
             <a xlink:href="#access-settings">
-                <g opacity="100%">
+                <g>
                     <rect x="16" y="461" width="343" height="52" fill="#030303" rx="24"></rect>
                     <text x="143" y="492" font-size="14" fill="#fff">Access Settings</text>
                 </g>
             </a>
-            
-            <g opacity="100%">
+            <g>
                 <rect x="0" y="619" width="375" height="48" fill="#f3f3f3"></rect>
-                <rect x="0" y="619" width="375" height="0" fill="#e5e7eb"></rect>
             </g>
-            <text x="55" y="635" font-size="12" fill="#030303" opacity="100%">Terms of Service</text>
-            <text x="210" y="635" font-size="12" fill="#030303" opacity="100%">Privacy Policy</text>
+            <text x="217" y="643" font-size="12" fill="#030303">Terms of Service</text>
+            <text x="316" y="643" font-size="12" fill="#030303">Privacy Policy</text>
         </svg>
     </div>
 </body>
