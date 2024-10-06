@@ -4,82 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Energy Audit Scheduler</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #fff;
+        }
+
+        svg {
+            width: 100%; /* Make SVG responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Optional: Center the SVG in the viewport */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Fill the viewport height */
+        }
+
+        /* Optional: Add some styles for links */
+        a {
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Optional: Button styles */
+        rect {
+            cursor: pointer; /* Change cursor to pointer for interactive elements */
+        }
+    </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 667" width="375" height="667" fill="none">
-        <rect width="375" height="667" fill="#fff"></rect>
-        <g opacity="100%">
-            <rect x="0" y="0" width="375" height="60" fill="#76d206" stroke="#e5e7eb" stroke-width="0" rx="0" filter="url(#filter_dshadow_0_0_0_00000014)"></rect>
-        </g>
-        <g opacity="100%">
-            <text x="116" y="36.5" font-family="Source Sans Pro" font-size="18" fill="#fff" letter-spacing="-0.45" font-weight="normal" font-style="normal">EnergyAuditScheduler</text>
-        </g>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10" height="10" fill="#fff" x="98" y="25" opacity="100%">
-            <path d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"></path>
-        </svg>
-        <g opacity="100%">
-            <text x="16" y="189.5" font-family="Source Sans Pro" font-size="24" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-                <tspan x="62">Welcome to Energy Audit</tspan>
-            </text>
-            <text x="16" y="221.5" font-family="Source Sans Pro" font-size="24" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-                <tspan x="134">Scheduler</tspan>
-            </text>
-        </g>
-        <g opacity="100%">
-            <text x="16" y="255" font-family="Source Sans Pro" font-size="16" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-                <tspan x="50">Schedule and manage your energy audits</tspan>
-            </text>
-            <text x="16" y="279" font-family="Source Sans Pro" font-size="16" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-                <tspan x="147">effortlessly!</tspan>
-            </text>
-        </g>
-        
-        <!-- Schedule an Audit Button -->
-        <a xlink:href="#schedule-audit">
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 375 667" fill="none">
+            <rect width="375" height="667" fill="#fff"></rect>
             <g opacity="100%">
-                <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="309" width="343" height="52" fill="#030303" stroke="#e5e7eb" stroke-width="0" rx="24"></rect>
-                <text x="134.5" y="340" font-family="Source Sans Pro" font-size="14" fill="#fff" letter-spacing="0" font-weight="normal" font-style="normal">
-                    <tspan>Schedule an Audit</tspan>
-                </text>
+                <rect x="0" y="0" width="375" height="60" fill="#76d206" stroke="#e5e7eb" stroke-width="0" rx="0" filter="url(#filter_dshadow_0_0_0_00000014)"></rect>
             </g>
-        </a>
+            <g opacity="100%">
+                <text x="116" y="36.5" font-size="18" fill="#fff" letter-spacing="-0.45" font-weight="normal" font-style="normal">EnergyAuditScheduler</text>
+            </g>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10" height="10" fill="#fff" x="98" y="25" opacity="100%">
+                <path d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"></path>
+            </svg>
+            <g opacity="100%">
+                <text x="16" y="189.5" font-size="24" fill="#030303">Welcome to Energy Audit</text>
+                <text x="16" y="221.5" font-size="24" fill="#030303">Scheduler</text>
+            </g>
+            <g opacity="100%">
+                <text x="16" y="255" font-size="16" fill="#030303">Schedule and manage your energy audits</text>
+                <text x="16" y="279" font-size="16" fill="#030303">effortlessly!</text>
+            </g>
+            
+            <!-- Schedule an Audit Button -->
+            <a xlink:href="#schedule-audit">
+                <g opacity="100%">
+                    <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="309" width="343" height="52" fill="#030303" rx="24"></rect>
+                    <text x="134.5" y="340" font-size="14" fill="#fff">Schedule an Audit</text>
+                </g>
+            </a>
 
-        <!-- View Scheduled Audits Button -->
-        <a xlink:href="#view-scheduled-audits">
-            <g opacity="100%">
-                <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="385" width="343" height="52" fill="#76d206" stroke="#e5e7eb" stroke-width="0" rx="24"></rect>
-                <text x="121.5" y="416" font-family="Source Sans Pro" font-size="14" fill="#fff" letter-spacing="0" font-weight="normal" font-style="normal">
-                    <tspan>View Scheduled Audits</tspan>
-                </text>
-            </g>
-        </a>
+            <!-- View Scheduled Audits Button -->
+            <a xlink:href="#view-scheduled-audits">
+                <g opacity="100%">
+                    <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="385" width="343" height="52" fill="#76d206" rx="24"></rect>
+                    <text x="121.5" y="416" font-size="14" fill="#fff">View Scheduled Audits</text>
+                </g>
+            </a>
 
-        <!-- Access Settings Button -->
-        <a xlink:href="#access-settings">
+            <!-- Access Settings Button -->
+            <a xlink:href="#access-settings">
+                <g opacity="100%">
+                    <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="461" width="343" height="52" fill="#030303" rx="24"></rect>
+                    <text x="143" y="492" font-size="14" fill="#fff">Access Settings</text>
+                </g>
+            </a>
+            
             <g opacity="100%">
-                <rect filter="url(#filter_dshadow_0_0_0_00000014)" x="16" y="461" width="343" height="52" fill="#030303" stroke="#e5e7eb" stroke-width="0" rx="24"></rect>
-                <text x="143" y="492" font-family="Source Sans Pro" font-size="14" fill="#fff" letter-spacing="0" font-weight="normal" font-style="normal">
-                    <tspan>Access Settings</tspan>
-                </text>
+                <rect x="0" y="619" width="375" height="48" fill="#f3f3f3" filter="url(#filter_dshadow_0_0_0_00000014)"></rect>
+                <rect x="0" y="619" width="375" height="0" fill="#e5e7eb"></rect>
             </g>
-        </a>
-        
-        <g opacity="100%">
-            <rect x="0" y="619" width="375" height="48" fill="#f3f3f3" filter="url(#filter_dshadow_0_0_0_00000014)"></rect>
-            <rect x="0" y="619" width="375" height="0" fill="#e5e7eb"></rect>
-        </g>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="16" height="16" fill="#030303" x="55" y="635" opacity="100%">
-            <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+            
+            <text x="217" y="643" font-size="12" fill="#030303" opacity="100%">Terms of Service</text>
+            <text x="316" y="643" font-size="12" fill="#030303" opacity="100%">Privacy Policy</text>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="14" height="14" fill="#030303" x="181" y="636" opacity="100%">
-            <path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM96 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-40z"></path>
-        </svg>
-        <text x="75" y="644" font-family="Source Sans Pro" font-size="16" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-            <tspan>Help</tspan>
-        </text>
-        <text x="196" y="644" font-family="Source Sans Pro" font-size="16" fill="#030303" letter-spacing="0" font-weight="normal" font-style="normal">
-            <tspan>Logout</tspan>
-        </text>
-    </svg>
+    </div>
 </body>
 </html>
